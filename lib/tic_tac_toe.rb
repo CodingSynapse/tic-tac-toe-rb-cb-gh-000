@@ -115,12 +115,10 @@ end
 
 
 def play(board)
-  round = 0
-  until round == 9
-    round += 1
-   turn(board)
- end
-if won?(board)
+  until over?(board)
+    turn(board)
+  end
+  if won?(board)
    puts "Congratulations #{won?(board)}!"
   end
 end
