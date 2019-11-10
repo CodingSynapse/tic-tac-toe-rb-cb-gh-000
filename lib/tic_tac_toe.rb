@@ -50,11 +50,11 @@ end
 
 def current_player(board)
 status = turn_count(board)
-if status.even?
-  return "X"
-else
-  return "O"
-end
+  if status.even?
+    return "X"
+  else
+    return "O"
+  end
 end
 
 def won?(board)
@@ -119,8 +119,5 @@ def play(board)
   until round == 9
     round += 1
    turn(board)
- elsif won?(board)
-   puts "Congratulations #{won?(board)}!"
   end
-end
 end
