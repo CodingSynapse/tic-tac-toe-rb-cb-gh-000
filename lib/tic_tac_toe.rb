@@ -34,7 +34,7 @@ def valid_move?(board,index)
   end
 end
 
-def move(board, position, value = "X")
+def move(board, position, value)
     board[position] = value
 end
 
