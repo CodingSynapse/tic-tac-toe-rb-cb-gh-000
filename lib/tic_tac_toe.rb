@@ -119,5 +119,8 @@ def play(board)
   until round == 9
     round += 1
    turn(board)
+ end
+if won?(board)
+   puts "Congratulations #{won?(board)}!"
   end
 end
